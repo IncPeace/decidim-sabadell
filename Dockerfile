@@ -1,4 +1,5 @@
-FROM decidim/decidim:0.23.1
+# FROM decidim/decidim:0.23.1
+FROM decidim/decidim-generator:0.23.1
 
 COPY Gemfile Gemfile.lock ./
 RUN bundle install
