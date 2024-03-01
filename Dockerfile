@@ -8,5 +8,5 @@ RUN bundle install
 RUN bundle exec rake assets:precompile
 
 # RUN apt-get --allow-releaseinfo-change update
-RUN apt-get update && apt-get install -y bash
+RUN apt-get --allow-releaseinfo-change update && apt-get install -y bash
 RUN apt-get install -y postgresql-client cron --fix-missing
