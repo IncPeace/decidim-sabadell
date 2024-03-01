@@ -4,7 +4,7 @@ LABEL maintainer="sistemas@aspgems.com"
 ENV RAILS_ENV=development
 ENV PORT=3000
 
-RUN apt-get update
+RUN apt-get --allow-releaseinfo-change update && apt-get install -y bash
 RUN apt-get install -y postgresql-client --fix-missing
 
 COPY Gemfile Gemfile.lock ./
